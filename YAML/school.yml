@@ -1,0 +1,7 @@
+school:
+  - name: dps
+    principal: someone
+    students:
+      - rno: 12
+        name: suraj
+        marks: 67

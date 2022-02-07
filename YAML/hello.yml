@@ -1,0 +1,25 @@
+"apple" : "i am a red fruit"
+1: "this is my rollno."
+---       # this is like a separator using which yaml understand that these are different documents or data structure  
+# lists
+- apple
+- mango
+- banana
+- Apple # yaml is case sesitive 
+---  
+cities:  #block of data
+ - new delhi
+ - mumbai
+ - gujrat # in yaml we use spaces and indentation is extremely immportant
+
+---
+cities: [new delhi, mumbai, gujrat ] # this syntax is basically to store data in firm of list in single line  and we dont wants to rely on indentation 
+                                     # we can use this flow type which is similar to the json type
+
+---
+{mango: "yellow fruit", age: 56}
+
+ ... # these three dots resembles that this is the document end 
+
+
+ # in yaml there are no multiline comments we need to use hash(#) to write comments

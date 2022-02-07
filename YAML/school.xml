@@ -1,0 +1,14 @@
+<!-- xml files are not human readable
+     it has a version
+     we have to provide the version and the encoding of the character -->
+
+<?xml version="1.0" encoding="UTF-8">
+<school name-"DPS" principal="someone">
+    <students>
+       <student>
+            <name>"John"</name>
+            <rollno.>20</rollno.>
+            <marks>100</marks>
+       </student>
+    </students>
+</school>
