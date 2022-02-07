@@ -1,0 +1,94 @@
+# ⭐ sequence
+student: !!seq
+ - marks
+ - name
+ - roll_no
+
+ # like this also
+ cities: [new delhi, mumbai, gujrat ]
+
+ #some of the keys of the seq will be empty this is known as the sparse sequence 
+ sparse seq:
+  - hey
+  - how
+  - 
+  - Null
+  - sup
+
+  # nested seq
+  -
+   - mango
+   - apple
+   - banana
+  -
+   - marks
+   - date
+   - roll_no
+
+# ⭐ maps   
+# key: value pairs are called maps 
+!!maps
+
+# nested mappings: map within an map
+name: dev jain
+role: 
+  age: 23
+  job: developer
+
+#same as abovename: dev jain
+name: dev jain
+role: {age: 23, job: developer}
+
+# ⭐ pairs   
+#pairs: keys may have duplicate values
+!!pairs
+
+pair example: !!pairs 
+ - job: student
+ - job: developer
+
+#same as
+pair example: !!pairs [job: student , job: developer] 
+#this will be an array of hashtables
+
+# ⭐ set
+#set: unordered collection of unique values
+# set will allow u to have unique values
+names: !!set
+ ? dev
+ ? kunal
+ ? kevin 
+
+# sometimes we want the key and its value to be a sequence for that we use dictioanry(!!omap)
+# ⭐  dictionaries == sequence of maps 
+# dictionaries !!omap
+people: !!omap 
+ - dev:
+    - name: dev jain
+    - age: 23
+    - job: developer
+ - kunal:
+    - name: kunal jain
+    - age: 23
+    - job: student
+
+
+# ⭐  reusing some properties using anchors (&anything)--> i.e anything/name after the & symbol is the anchor
+likings: &base #(giving anchor a name)        # declare this property with &anything to reuse it
+  fav fruit: apple
+  dislikes: tomato
+
+person1: 
+  name: dev jain
+  <<: *base          # use the *base to reuse/access the properties of the base property
+
+person2:
+  name: kunal 
+  <<: *base
+  dislikes: mango     # overriding the property of the base property
+
+  # this will look like this 
+  person2: 
+    name: kunal
+    fav fruit: apple
+    dislikes: mango

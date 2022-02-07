@@ -1,0 +1,59 @@
+name: dev jain     # string without quotes
+fruit: "apple"     # string with double quotes
+job: 'developer'   # string with single quotes
+
+bio: |             # using the | character we can write multiline string
+    I am a developer
+    I am a good
+# syntax : anyWord:(single sapce) value 
+# so basically the value is called the variable 
+# variables can be of many types : strings ( can be with quote or withou quotes a shown above )
+
+# wrtie a single line in multipke lines
+message: >   # using the > character we can write a single line in multiple lines
+this is      
+a 
+amazing 
+feeling 
+
+#same as above 
+message: this is a amazing feeling
+
+number: 134
+marks: 98.56  # float
+booleanvalue: No # boolean values
+                 # n, N, no, NO, false, False, FALSE
+                 # y, Y, yes, YES, true, True, TRUE 
+
+# although yml can automatically identify its data type but we can also specify the data type
+
+# specify the data type
+# syntax : anyWord:(single sapce) !!dataType value 
+Zero: !!int 0
+posnum: !!int 45
+negnum: !!int -78
+binaryNum: !!int 0b1010
+octalNum: !!int 0o744
+hexNum: !!int 0x1A2B3C
+commaValues: !!int +540_000  #540,000
+exponentialNum: !!float 1.23e+5
+
+## floating point numbers
+marks: !!float 3.14
+infinite: !!float .inf
+not a number: !!float .nan
+
+# boolean values
+boolean: !!bool true
+
+# string
+name: !!str "dev jain"
+
+# null
+surname: !!null Null # or null ,Null , ~
+~: this is a null key
+
+# dates and times
+date: !!timestamp "2018-01-01T00:00:00Z"
+Indiatime: !!timestamp "2018-01-01T00:00:00+05:30"
+noTimeZone: !!timestamp "2018-01-01T00:00:00"
