@@ -5,5 +5,6 @@
 ## tools
 - datree.io                                      <!--(validates YAML files)
                                                       also helps in kubernetes schema checks-->
-- monokole (by kubeshop)                         <!-- its makes it easier to work with large scale yaml files                                                 (kubernetes menifest)-->
+- monokole (by kubeshop)                         <!-- its makes it easier to work with large scale yaml files                                                 (kubernetes
+                                                      menifest)-->
 - lens                                           <!-- -->
